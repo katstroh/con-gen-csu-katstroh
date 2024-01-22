@@ -1,6 +1,6 @@
 ---
 title: "About Me"
-author: "Insert Name Here"
+author: "Katherine M. Stroh"
 output:
   html_document:
     toc: yes
@@ -13,25 +13,22 @@ bibliography: references.bib
 
 # Who I am and where I came from
 
-First off, replace "Insert Name Here" in the YAML header with your name.
-It has to be surrounded by double quotation marks. 
-Briefly tell us a little background about yourself, and how
-you ended up becoming a student at CSU and taking this class.
-Put in a hypertext link to your undergraduate institution.  
+I was born and raised in a small farm town in central Oklahoma by two outdoor enthusiasts and national parks nerds. Every family vacation we took was to visit a new park, and I grew up with a deep appreciation for the natural world and all of its diversity. Living in a rural area, I also became very comfortable looking for and catching all manner of critters: toads, snakes, lizards, tarantulas... basically anything that moved I wanted to catch and study.
+As I grew older, I began trying to figure out what I wanted to do with my life; many people told me that I should be a doctor because I was smart and would make a lot of money, so when I began my undergraduate education at [The University of Oklahoma](https://www.ou.edu) I decided to pursue a B.S. in biology as a pre-med student. After several years studying and volunteering/working in various clinics, I became introduced to the world of herpetological research through a serendipitous enrollment in an elective course that filled the last of my degree requirements. Through my experience in that class I realized that I could make a career out of the very things I loved as a child: being outside and looking for cool animals, and that I could combine that with my training in laboratory techniques and research methods.
+After graduating from OU with a dual degree in biology and Spanish I began working as a research and field tech for a herpetology collection in a natural history museum, then decided I wanted to find a job that would allow me to use both my research background and my background in Spanish. I applied for and won a Fulbright Fellowship to research the effects of climate change on amphibians in Ecuador, where I spent a little over a year studying frogs, toads, and caecilians in the Amazon and the Andes mountains. Through my collaborators I became familiar with Chris Funk's work, and reached out to him to see if he would be interested in taking me on as a graduate student to continue the project I had started in Ecuador. We met via Zoom and developed several ideas for expanding my project into a thesis-worthy endeavor, I applied to CSU, was accepted, and am just starting my first semester of classes.
 
-Include a numbered list of your top-four favorite leisure activities, like this:
+My four favorite activities when I am not chasing herps are:
 
-1. My favorite
-1. Second favorite
-1. third favorite
-1. fourth favorite
+1. making/eating food (especially desserts)
+2. going to concerts
+3. traveling
+4. anything active and/or outdoors, but particularly lifting weights, hiking, and kayaking
 
+Here is a picture of me learning to climb trees to look for amphibians in bromeliads in the tree canopy.
 
-Include a picture (jpg or png) of yourself, to get some practice in inserting
-images into RMarkdown. See the example to see how that can be done.
-Note that JPEGs that include EXIF information might be incorrectly rotated.
-That is OK if you can't figure out how to fix it.
-
+```{r me_pic, echo=FALSE, out.width="500px"}
+knitr::include_graphics("images/Kat Stroh Image 1.jpg", auto_pdf = TRUE)
+```
 
 
 
