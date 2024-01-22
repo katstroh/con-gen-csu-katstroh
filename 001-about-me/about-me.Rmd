@@ -45,14 +45,14 @@ I also find my research in Ecuador shaped by an article written by @bustamante20
 
 ## The mathematics behind my research
 
-One important consideration in disease ecology is modeling infection transmission in a population of individuals with three possible states: infected, susceptible, or dead. In this case one way to calculate the infection rate within a population is with the following equation:
+One important consideration in disease ecology is modeling infection transmission in a population of individuals with three possible states: infected, susceptible, or dead. In this case one way to calculate the infection rate within a hypothetical population is with the following equation:
 $$
 \frac{dI}{dt} =βSI − I(µ + m)
 $$
 
 where I is the number of infected individuals, S represents the number of susceptible individuals, β is the disease transmission rate, µ is the per capita mortality rate due to the disease, and m is the natural per capita mortality rate.
 
-In a natural system, there is often a fourth possible state, recovered individuals that have immunity for the rest of their lifetime (think chicken pox), which can be input into the system using the following equations where R is the number of recovered individuals:
+In a natural system, there is often a fourth possible state, recovered individuals that have immunity for the rest of their lifetime (think chicken pox in humans), which can be input into the system using the following equations where R is the number of recovered individuals:
 $$
 \frac{d}{d
 t}(S+I+R)=0
@@ -64,12 +64,13 @@ and
 $$
 \frac{dI}{dt}=βIS−γI
 $$
-with γ representing the recovery rate.
+and γ representing the recovery rate.
 
 ## My computing experience
 
 I have very very little programming experience. I have used R to make basic plots and have played around in R Studio, but have no formal education in programming. Here is some code I found online evaluating a disease infection model:
-```
+
+```{r}
 solve_SIRS <- function(
   S0, I0, beta = 1, gamma = 1, mu = 1, delta_t = 0.01, times = 1000
 ) {
@@ -77,8 +78,7 @@ solve_SIRS <- function(
     NA, nrow = times, ncol = 4, dimnames = list(NULL, c('S', 'I', 'R', 'Time'))
   )
   res[1, ] <- c(S0, I0, 1 - S0 - I0, delta_t)
-  
-  dS <- function(S, I, R) -beta * I * S + mu * R
+   dS <- function(S, I, R) -beta * I * S + mu * R
   dI <- function(S, I, R)  beta * I * S - gamma * I
   
   for (i in seq(2, times)) {
@@ -115,9 +115,12 @@ plot_SIRS <- function(res, main = '') {
   )
 }
 ```
+  
+
 And here is some Python code converting kilometers to miles, as conversions are something I have had to do frequently in international research and travel.
 
-```
+```{python, python.reticulate = FALSE}
+
 # Taking kilometers input from the user
 kilometers = float(input("Enter value in kilometers: "))
 
@@ -140,11 +143,22 @@ As I take this class, I hope to:
 
 # Evaluating some R code
 
-Here, please evaluate some R code to make a plot or a figure.
-The goal here is just to realize that you can imbed R code
-within fenced code blocks and get the output rendered into
-the document.
+Here is a random scatterplot of some random data with a polynomial curve fitted over top and a confidence interval added using the function polygon().
 
+```{r}
+x <- runif(300, min=-30, max=30) 
+y <- -1.2*x^3 + 1.1 * x^2 - x + 10 + rnorm(length(x),0,100*abs(x))
+ 
+plot(x,y,col=rgb(0.4,0.4,0.8,0.6), pch=16 , cex=1.3 , xlab="" , ylab="") 
+
+model <- lm(y ~ x + I(x^2) + I(x^3))
+
+myPredict <- predict( model , interval="predict" )
+
+ix <- sort(x,index.return=T)$ix
+lines(x[ix], myPredict[ix , 1], col=2, lwd=2 )
+polygon(c(rev(x[ix]), x[ix]), c(rev(myPredict[ ix,3]), myPredict[ ix,2]), col = rgb(0.7,0.7,0.7,0.4) , border = NA)
+```
 
 
 # Citations
