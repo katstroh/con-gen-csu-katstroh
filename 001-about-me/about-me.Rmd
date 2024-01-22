@@ -24,49 +24,23 @@ My four favorite activities when I am not chasing herps are:
 3. traveling
 4. anything active and/or outdoors, but particularly lifting weights, hiking, and kayaking
 
-Here is a picture of me learning to climb trees to look for amphibians in bromeliads in the tree canopy.
+Here is a picture of me learning to climb trees to look for amphibians in the forest canopy.
 
 ```{r me_pic, echo=FALSE, out.width="500px"}
 knitr::include_graphics("images/Kat Stroh Image 1.jpg", auto_pdf = TRUE)
 ```
 
 
-
-
 # Research Interests
 
-Brief description of your research interests.
+In general, I am interested in disease ecology and the effects of climate change within amphibian and reptile communities. For my thesis research I will be looking at the effects of climate change, habitat fragmentation, and infectious disease on tropical amphibians. I will be doing this across a 4,000-meter elevational gradient from the Amazon basin to the upper Andes in Ecuador, and in the future would like to do a similar project in a temperate region.
+
 
 ## Influential papers
 
-Describe two papers that have been very influential in your
-research.  The main purpose of this is learning how to
-cite literature in RMarkdown.  You will have to add the citations
-to `references.bib` in BibTeX format, and then also cite them.
+The first paper that has influenced the current direction of my research is @scheele2019amphibian, a paper describing the current (as of 2019) state  of a global panzootic impacting amphibians in all seven continents and precipitating the decline of over 500 species. This paper highlights the importance of amphibian infectious disease research and key regions for investigation. 
 
-An easy way to get the paper in BibTeX format is to find it on
-Google Scholar.  Then, under the paper's link, click on the big 
-fat quotation marks, and then choose the BibTex link at the bottom
-of the page.  Then copy the contents into `references.bib`.  For example
-you might paste this into `references.bib`.
-```
-@article{richardson1997bayesian,
-  title={On Bayesian analysis of mixtures with an unknown number of components (with discussion)},
-  author={Richardson, Sylvia and Green, Peter J},
-  journal={Journal of the Royal Statistical Society: series B (statistical methodology)},
-  volume={59},
-  number={4},
-  pages={731--792},
-  year={1997},
-  publisher={Wiley Online Library}
-}
-```
-Note the string before the comma on the first line.  That is the cite key.
-Once you have done that, you can cite it by including `@richardson1997bayesian`
-if you don't want the name in parenthesis, like, "As @richardson1997bayesian introduced in
-their landmark paper."  On the other hand, you can use `[@richardson1997bayesian]` if
-you do want it all in parentheses, like, "Reversible jump MCMC has been previously applied
-to the analysis of mixtures [@richardson1997bayesian]."
+I also find my research in Ecuador shaped by an article written by @bustamante2005cambios and describes a study of seven different amphibian communities studied during almost 40 years. My project is very similar to Bustamante et al.'s, but surveys additional sites across a wider range of elevations and occurs 19 years subsequent to the previous study.
 
 
 ## The mathematics behind my research
